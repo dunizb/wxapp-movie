@@ -1,0 +1,6 @@
+<view class="content">
+    <view class="search">
+        <input class="input" placeholder="输入电影名、导演、演员" bindinput="bindKeyInput" />
+        <button bindtap="search" type="primary"> 查 询 </button>
+    </view>
+</view>

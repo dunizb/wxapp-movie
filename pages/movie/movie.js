@@ -37,6 +37,7 @@ Page({
           header:{
               'Content-Type':'application/json'
           },
+          data:{count:50},
           success:function(res){
               var subjects = res.data.subjects;
               subjectsUtil.processSubjects(subjects);

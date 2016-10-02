@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/movie/movie",
-    "pages/top250/top250"
+    "pages/top250/top250",
+    "pages/search/search"
   ],
   "tabBar": {
     "backgroundColor":"black",
@@ -17,7 +18,7 @@
       "selectedIconPath":"pages/assets/img/2.png",
       "text": "电影推荐"
     }, {
-      "pagePath": "pages/movie/movie",
+      "pagePath": "pages/search/search",
       "iconPath":"pages/assets/img/1.png",
       "selectedIconPath":"pages/assets/img/1.png",
       "text": "查询电影"
