@@ -6,18 +6,9 @@
             </swiper-item>
         </block>
     </swiper>
-    <block wx:for="{{movies}}">
-        <view class="movie">
-            <view class="pic">
-                <image src="{{item.images.medium}}" model="aspectFit" />
-            </view>
-            <view class="movie-info">
-                <view class="base-info">
-                    <text>{{item.text}}</text>
-                </view>
-            </view>
-        </view>
-    </block>
+    
+    <import src="../template/movieListTpl.wxml"/>
+    <template is="movieList" data="{{movies}}"/>
 </view>
 <view class="body-view">
   <loading hidden="{{loadingHidden}}" bindchange="loadingChange">

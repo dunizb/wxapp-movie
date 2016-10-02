@@ -1,0 +1,14 @@
+<template name="movieList">
+    <block wx:for="{{movies}}">
+        <view class="movie">
+            <view class="pic">
+                <image src="{{item.images.medium}}" model="aspectFit" />
+            </view>
+            <view class="movie-info">
+                <view class="base-info">
+                    <text>{{item.text}}</text>
+                </view>
+            </view>
+        </view>
+    </block>
+</template>
