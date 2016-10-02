@@ -1,6 +1,17 @@
 <view class="content">
     <view class="search">
         <input class="input" placeholder="输入电影名、导演、演员" bindinput="bindKeyInput" />
-        <button bindtap="search" type="primary"> 查 询 </button>
+        <button bindtap="search" type="primary" hover-class="btnClick"> 查 询 </button>
+    </view>
+    <text class="inputShow">你要搜索：{{inputVal}}</text>
+</view>
+<view>
+    <import src="../template/movieListTpl.wxml"/>
+    <template is="movieList" data="{{movies}}"/>
+
+    <view class="body-view">
+    <loading hidden="{{loadingHidden}}" bindchange="loadingChange">
+        加载中...
+    </loading>
     </view>
 </view>
