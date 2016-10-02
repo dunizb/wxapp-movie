@@ -42,6 +42,7 @@ Page({
             data:{count:50},
             success:function(res){
                 var subjects = res.data.subjects;
+                page.setData({inputVal:res.data.title+"，共”"+ res.data.total +"”调记录"});
                 subjectsUtil.processSubjects(subjects);
                 page.setData({"movies":subjects,"loadingHidden":true});
             }
