@@ -4,7 +4,9 @@ Page({
     // text:"这是一个页面"
     inputVal:"",
     movies:[],
-    loadingHidden:true
+    loadingHidden:true,
+    modalHidden:true,
+    tip:""
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -26,18 +28,28 @@ Page({
   },
   search(){
       var page = this;
-      page.setData({loadingHidden:false});
-      wx.request({
-          url:"http://api.douban.com/v2/movie/search?q="+page.data.inputVal,
-          header:{
-              "Content-Type":"application/json"
-          },
-          data:{count:50},
-          success:function(res){
-              var subjects = res.data.subjects;
-              subjectsUtil.processSubjects(subjects);
-              page.setData({"movies":subjects,"loadingHidden":true});
-          }
-      });
+      var queryStr = page.data.inputVal;
+      if(queryStr == ""){
+          this.setData({"tip":"输入内容不能为空"});
+          this.setData({"modalHidden":false});
+      }else{
+          page.setData({loadingHidden:false});
+          wx.request({
+            url:"http://api.douban.com/v2/movie/search?q="+queryStr,
+            header:{
+                "Content-Type":"application/json"
+            },
+            data:{count:50},
+            success:function(res){
+                var subjects = res.data.subjects;
+                subjectsUtil.processSubjects(subjects);
+                page.setData({"movies":subjects,"loadingHidden":true});
+            }
+        });
+      }
+      
+  },
+  modalChange(){
+      this.setData({"modalHidden":true});
   }
 })

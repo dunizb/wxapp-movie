@@ -15,3 +15,7 @@
     </loading>
     </view>
 </view>
+
+<modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange" >
+  {{tip}}
+</modal>
