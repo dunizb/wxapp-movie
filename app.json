@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/movie/movie"
+  ],
+  "tabBar": {
+    "backgroundColor":"black",
+    "selectedColor":"green",
+    "list": [{
+      "pagePath": "pages/movie/movie",
+      "iconPath":"pages/assets/img/3.png",
+      "selectedIconPath":"pages/assets/img/3.png",
+      "text": "影院热映"
+    }, {
+      "pagePath": "pages/movie/movie",
+      "iconPath":"pages/assets/img/2.png",
+      "selectedIconPath":"pages/assets/img/2.png",
+      "text": "电影推荐"
+    }, {
+      "pagePath": "pages/movie/movie",
+      "iconPath":"pages/assets/img/1.png",
+      "selectedIconPath":"pages/assets/img/1.png",
+      "text": "查询电影"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "读你电影",
+    "navigationBarTextStyle":"white"
+  }
+}

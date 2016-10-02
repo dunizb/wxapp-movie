@@ -1,0 +1,25 @@
+.content{
+    background-color: #fff;
+    min-height: 100%;
+}
+.movie{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    margin: 5px 3px;
+    box-shadow: 0 2px 5px #ccc;
+    background-color: #666;
+}
+.pic image{
+    width:80px;
+    height: 130px;
+}
+.movie-info{
+    padding-left: 20px;
+}
+.base-info{
+    color:#fff;
+    font-size: 12px;
+    padding-top: 20px;
+    line-height: 20px;
+}

@@ -1,0 +1,26 @@
+<view class="content">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" >
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" style="width:100%"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <block wx:for="{{movies}}">
+        <view class="movie">
+            <view class="pic">
+                <image src="{{item.images.medium}}" model="aspectFit" />
+            </view>
+            <view class="movie-info">
+                <view class="base-info">
+                    <text>{{item.text}}</text>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+<view class="body-view">
+  <loading hidden="{{loadingHidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>
