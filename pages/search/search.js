@@ -35,7 +35,7 @@ Page({
       }else{
           page.setData({loadingHidden:false});
           wx.request({
-            url:"http://api.douban.com/v2/movie/search?q="+queryStr,
+            url:"https://api.douban.com/v2/movie/search?q="+queryStr,
             header:{
                 "Content-Type":"application/json"
             },

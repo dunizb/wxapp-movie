@@ -33,7 +33,7 @@ Page({
   loadMovie(){
       var page = this;
       wx.request({
-          url:"http://api.douban.com/v2/movie/in_theaters",
+          url:"https://api.douban.com/v2/movie/in_theaters",
           header:{
               'Content-Type':'application/json'
           },

@@ -24,7 +24,7 @@ Page({
   loadMovie(){
       var page = this;
       wx.request({
-          url:"http://api.douban.com/v2/movie/top250",
+          url:"https://api.douban.com/v2/movie/top250",
           header:{
               'Content-Type':'application/json'
           },
