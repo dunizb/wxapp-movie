@@ -1,6 +1,8 @@
 # wxapp-movie
 微信小程序-读你电影（豆瓣API）
 
+**2016-10-15更新：**豆瓣API借口更换为https,如过之前clone的出现获取不到豆瓣API的请重新clone一下
+
 ![](GIF.gif)
 
 ## 功能
